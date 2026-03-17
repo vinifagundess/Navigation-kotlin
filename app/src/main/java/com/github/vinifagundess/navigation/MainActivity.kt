@@ -1,4 +1,4 @@
-package com.github.vinifagundess
+package com.github.vinifagundess.navigation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
