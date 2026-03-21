@@ -31,7 +31,6 @@ class MainActivity : ComponentActivity() {
                         startDestination = "login",
                     ) {
                         composable(route = "login") {
-                            // Mantenha apenas a linha que passa o navController
                             LoginScreen(modifier = Modifier.padding(innerPadding), navController)
                         }
                         composable(route = "menu") {
@@ -40,8 +39,13 @@ class MainActivity : ComponentActivity() {
                         composable(route = "pedidos") {
                             PedidosScreen(modifier = Modifier.padding(innerPadding), navController)
                         }
-                        composable(route = "perfil") {
-                            PerfilScreen(modifier = Modifier.padding(innerPadding), navController)
+                        composable(route = "perfil/{nome}") {
+                            val nome: String? = it.arguments?.getString("nome", "Usuário Genérico")
+                            PerfilScreen(
+                                modifier = Modifier.padding(innerPadding),
+                                navController,
+                                nome!!
+                            )
                         }
                     }
                 }

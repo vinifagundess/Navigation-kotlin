@@ -1,5 +1,6 @@
 package com.github.vinifagundess.navigation.screens // PACOTE DO SEU PROJETO
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -13,34 +14,31 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 
 @Composable
-fun LoginScreen(
-    modifier: Modifier = Modifier,
-    navController: NavController
-) {
+fun LoginScreen(modifier: Modifier = Modifier, navController: NavHostController) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
-        contentAlignment = Alignment.Center
+            .background(Color(0xFFED145B))
+            .padding(32.dp)
     ) {
-
-
+        Text(
+            text = "LOGIN",
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.White
+        )
         Button(
-
-            onClick = {
-                navController.navigate("menu")
-            },
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Blue),
-
+            onClick = { navController.navigate("menu") },
+            colors = ButtonDefaults.buttonColors(Color.White),
+            modifier = Modifier.align(Alignment.Center)
         ) {
             Text(
-                text = "Entrar",
-                color = Color.White,
-                fontWeight = FontWeight.Bold,
-                fontSize = 18.sp
+                text = "ENTRAR",
+                fontSize = 20.sp,
+                color = Color.Blue
             )
         }
     }
