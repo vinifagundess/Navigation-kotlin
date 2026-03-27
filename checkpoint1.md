@@ -1,10 +1,11 @@
-Descrição do projeto
+Descrição do projeto:
+
 O projeto é um aplicativo Android desenvolvido com Jetpack Compose que implementa um sistema de navegação entre múltiplas telas. A estrutura conta com telas fundamentais como Login, Menu principal, Perfil do usuário e página de Pedidos, utilizando a biblioteca Compose Navigation para gerenciar o fluxo contínuo e a transferência de dados dinâmicos entre os componentes de interface.
 
-Objetivo da prova
+Objetivo da prova:
 O objetivo principal desta prova é evidenciar a compreensão clara do que está sendo feito e implementado no código. Em vez de apenas apresentar o resultado final, o foco é demonstrar o entendimento prático de como o fluxo de navegação funciona com o Jetpack Compose, explicando a lógica por trás da configuração de rotas e da passagem de parâmetros (obrigatórios, opcionais e de múltiplos tipos) entre as telas do aplicativo.
 
-Explicação de cada evolução implementada
+Explicação de cada evolução implementada:
 Commit 1: Passagem de parâmetros obrigatórios na tela de Perfil
 
 O que foi implementado: A tela de Perfil foi modificada para exigir e exibir uma informação dinâmica (o nome do usuário) passada através da navegação.
